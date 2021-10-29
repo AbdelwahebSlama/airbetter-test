@@ -1,0 +1,47 @@
+
+
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+
+          <!-- form inscrit-->
+          <div class="card rounded-0">
+            <div class="card-header" style="background-color: rgb(45,153,194);">
+              <h3 class="mb-0 text-white">Student List </h3>
+            </div>
+            <div class="card-body">
+              <div>
+                <table class="table table-striped">
+                  <thead>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>Age</th>
+                  <th>Detail</th>
+                  <th>Remove</th>
+                  </thead>
+                  <tbody>
+                  <tr class="table-" *ngFor="let student of students" >
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.lastName}}</td>
+                    <td>{{student.age}}</td>
+                    <td><button class="btn btn-success" (click)="click(student.id)">Details</button></td>
+                    <td><button class="btn btn-primary" (click)="deleteStudent()">Remove</button></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!--/card-block-->
+          </div>
+          <!-- /form card login -->
+        </div>
+      </div>
+      <!--/row-->
+    </div>
+    <!--/col-->
+  </div>
+  <!--/row-->
+</div>
